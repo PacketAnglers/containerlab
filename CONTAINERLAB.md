@@ -11,17 +11,14 @@ Typical VM Usage Fee is:  $0.25/hr (8 vCPUs 32GM RAM)
 
 Disk and Public Static IP Address - additional cost (but minimal)
 
-## Step 2: Create Project and VM Instance with SSH Keys
-2.1 - Create a New [Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) to track your VMs under.
+## Step 2: Create VM Instance with SSH Keys
 
-2.2 - Create VM Instance with the following attributes:
+### 2.1 - Create VM Instance with the following attributes:
 
 - Machine type:	e2-standard-8 (8vCPUs and 32GB RAM)
 - Disk: 20GB
 - OS: Ubuntu 20.04
-
-
-2.3 Add SSH Keys
+### 2.2 Add SSH Keys
 
 After Instance boots, then add your Public SSH Key to the VM Instance.  In GCP, edit your VM instance and scroll down to the "Security and access" section.  Click `ADD ITEM` to add your ssh key.  Then click `SAVE` at the bottom.
 
@@ -36,8 +33,7 @@ After Instance boots, then add your Public SSH Key to the VM Instance.  In GCP, 
   - Use Puttygen to create Key Pair
   - Add Public Key to the Host
   - Connect to Host via Putty using Private Key
-
-2.4 - Connect to VM.  
+### 2.3 - Connect to VM.  
 
 Now SSH to VM instance using the assigned public IP address.  Note you can make this a static address if desired.
 

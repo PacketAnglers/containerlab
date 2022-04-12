@@ -22,8 +22,11 @@ From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine 
 - `Zone:` < your choice >
 - `Machine Series:` E2
 - `Machine type:` e2-standard-8 (8vCPUs and 32GB RAM)
-- `Boot Disk:` 20GB
-- `Image:` Ubuntu 20.04
+- `Boot Disk:`
+  - `Operating System:` Ubuntu
+  - `Version:` 20.04 LTS
+  - `Boot disk type:` Balanced persistent disk
+  - `Size (GB):` 20
 
 Now click `CREATE` at the bottom.
 ### 2.2 Add SSH Keys

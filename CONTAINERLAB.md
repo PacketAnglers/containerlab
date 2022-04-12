@@ -25,7 +25,7 @@ Create VM Instance with the following attributes:
 
 After Instance boots, then add your Public SSH Key to the VM Instance.  In GCP, edit your VM instance and scroll down to the "Security and access" section.  Click `ADD ITEM` to add your ssh key.  Then click `SAVE` at the bottom.
 
-<img src="images/ssh-keys.png"  width="450">
+<img src="images/ssh-keys-v2.png"  width="450">
 
 - Mac:  
   - Use existing keys or generate a new key pair with ssh-keygen

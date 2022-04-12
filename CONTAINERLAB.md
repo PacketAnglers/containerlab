@@ -1,0 +1,80 @@
+# ContainerLab using GCP
+
+## Step 1: Create GCP Account
+
+https://console.cloud.google.com/
+Free $300 Credit to use.  No autocharge after free trial ends.
+
+Typical VM Usage Fee is:  $0.25/hr
+8 vCPUs 32GM RAM
+
+Disk and Public Static IP Address - additional cost (but minimal)
+
+## Step 2: Create Project & VM Instance
+Create a New Project to track your VMs under.
+
+VM Instance:
+
+Machine type:	e2-standard-8 (8vCPUs and 32GB RAM)
+Disk: 20GB
+OS: Ubuntu 20.04
+
+
+SSH Keys
+
+After Instance boots, then Add SSH Public Key to the VM Instance.
+
+Mac:  
+Use existing keys or generate a new key pair with ssh-keygen
+Add Public Key to Host (see below)
+Connect to Host using favorite SSH client
+
+Windows:
+Use Puttygen to create Key Pair
+Add Public Key to the Host (see below)
+Connect to Host via Putty using Private Key
+
+Add Keys to VM Instance
+
+Now ssh to VM instance using the assigned public IP address.  Note you can make this a static address if desired.
+
+## Step 3: Install Docker
+Below is a simplified one liner bash script that will install docker to your Linux VM.
+
+```bash
+bash -c "$(curl http://www.packetanglers.com/installdocker.sh)"
+```
+
+Logout and log back in to enable sudo permissions to Docker.
+
+## Step 4: Download cEOS Image and import into Docker 
+The following 2 commands will download an Arista cEOS Container image file and then import it into Docker.
+
+```bash
+curl http://www.packetanglers.com/images/cEOS-lab-4.27.3F.tar -o cEOS-lab-4.27.3F.tar
+```
+
+Now import this image into Docker - takes approximately 30 secs.  Be patient.
+
+```bash
+docker import cEOS-lab-4.27.3F.tar ceos:4.27.3F
+```
+## Step 5: Install ContainerLab
+
+This is a one line install script. It will detect the OS
+
+```bash
+bash -c "$(curl -sL https://get-clab.srlinux.dev)"
+```
+
+## Step 6: Clone Example ContainerLab Topology Repo
+
+```bash
+git clone https://github.com/PacketAnglers/clab-topos.git
+```
+
+## Step 7: Start first ContainerLab
+
+```bash
+sudo clab deploy -t clab-topos/atd-dc/atd-dc.yml --reconfigure
+```

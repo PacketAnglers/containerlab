@@ -1,4 +1,4 @@
-# Using GCP to run ContainerLab
+# Getting Started with GCP and ContainerLab
 
 <img src="images/gcp-clab.png"  width="450">
 

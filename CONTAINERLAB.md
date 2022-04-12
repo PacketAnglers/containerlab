@@ -15,18 +15,18 @@ Disk and Public Static IP Address - additional cost (but minimal)
 From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine section.  If this is your first time creating a VM instance in GCP, you will need to enable Compute Engine API.  This takes a few seconds to complete.  Once complete, you will be able to add a new VM Instance by clicking `CREATE INSTANCE`.  Use the follow instance attributes to create a VM capable of sufficiently running several cEOS instances for your ContainerLab environiment.
 ### 2.1 - Create VM Instance with the following attributes:
 
-- Name: < hostname given to VM >
-- Region: < your choice >
-- Zone: < your choice >
-- Machine Series: E2
-- Machine type:	e2-standard-8 (8vCPUs and 32GB RAM)
-- Boot Disk: 20GB
-- Image: Ubuntu 20.04
+- `Name:` < hostname given to VM >
+- `Region:` < your choice >
+- `Zone:` < your choice >
+- `Machine Series:` E2
+- `Machine type:` e2-standard-8 (8vCPUs and 32GB RAM)
+- `Boot Disk:` 20GB
+- `Image:` Ubuntu 20.04
 
 Now click `CREATE` at the bottom.
 ### 2.2 Add SSH Keys
 
-After Instance boots, then add your Public SSH Key to the VM Instance.  In GCP, edit your VM instance and scroll down to the "Security and access" section.  Click `ADD ITEM` to add your ssh key.  Then click `SAVE` at the bottom.
+After Instance boots, add your Public SSH Key to the VM Instance.  In GCP, edit your VM instance and scroll down to the `Security and Access` section.  Click `ADD ITEM` to add your ssh key.  Then click `SAVE` at the bottom.
 
 <img src="images/ssh-keys-v2.png"  width="450">
 

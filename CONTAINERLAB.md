@@ -80,8 +80,23 @@ bash -c "$(curl -sL https://get-clab.srlinux.dev)"
 git clone https://github.com/PacketAnglers/containerlab.git
 ```
 
-## Step 7: Start first ContainerLab
+## Step 7: Start ContainerLab
 
 ```bash
 sudo clab deploy -t containerlab/topologies/topo1/topo1.yaml --reconfigure
 ```
+
+## Step 8: Connect to your ContainerLab
+Point your browser to the the public IP of your VM at this URL:
+
+http://< VM public ip >/graphite
+
+## Step 9: Destory Lab
+
+```bash
+sudo clab destroy -t containerlab/topologies/topo1/topo1.yaml
+```
+
+## Step 10: Shutdown VM
+
+From GCP Console, make sure you shutdown your VM when you are not using it.

@@ -1,10 +1,9 @@
 # ContainerLab using GCP
 
-This repositiory outlines the steps needed to create a GCP Account to create a VM to run ContainerLab.
+This repositiory outlines the steps needed to create a VM running in GCP to run ContainerLab.  Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).
 ## Step 1: Create GCP Account
 
-[https://console.cloud.google.com/](https://console.cloud.google.com/)
-
+Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).
 Free $300 Credit to use.  No autocharge after free trial ends.
 
 Typical VM Usage Fee is:  $0.25/hr (8 vCPUs 32GM RAM)
@@ -13,11 +12,18 @@ Disk and Public Static IP Address - additional cost (but minimal)
 
 ## Step 2: Create VM Instance with SSH Keys
 
+From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine section.  If this is your first time creating a VM instance in GCP, you will need to enable Compute Engine API.  This takes a few seconds to complete.  Once complete, you will be able to add a new VM Instance by clicking `CREATE INSTANCE`.  Use the follow instance attributes to create a VM capable of sufficiently running several cEOS instances for your ContainerLab environiment.
 ### 2.1 - Create VM Instance with the following attributes:
 
+- Name: < hostname given to VM >
+- Region: < your choice >
+- Zone: < your choice >
+- Machine Series: E2
 - Machine type:	e2-standard-8 (8vCPUs and 32GB RAM)
-- Disk: 20GB
-- OS: Ubuntu 20.04
+- Boot Disk: 20GB
+- Image: Ubuntu 20.04
+
+Now click `CREATE` at the bottom.
 ### 2.2 Add SSH Keys
 
 After Instance boots, then add your Public SSH Key to the VM Instance.  In GCP, edit your VM instance and scroll down to the "Security and access" section.  Click `ADD ITEM` to add your ssh key.  Then click `SAVE` at the bottom.

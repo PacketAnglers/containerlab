@@ -43,10 +43,10 @@ topology:
       binds:
         - .:/var/www/localhost/htdocs/clab
       ports:
-        - 8080:80
+        - 80:80
       exec:
         - sh -c 'generate_offline_graph.sh'
-        - sh -c 'graphite_motd.sh 8080'
+        - sh -c 'graphite_motd.sh 80'
       labels:
         graph-hide: yes
 

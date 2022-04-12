@@ -1,6 +1,6 @@
 # Getting Started with GCP and ContainerLab
 
-<img src="images/gcp-clab.png"  width="450">
+<img src="images/gcp-clab.png" width="450">
 
 This repository outlines the steps needed to create a VM running in GCP to run ContainerLab.  Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).
 ## Step 1: Create GCP Account
@@ -30,7 +30,7 @@ Now click `CREATE` at the bottom.
 
 After Instance boots, add your Public SSH Key to the VM Instance.  In GCP, edit your VM instance and scroll down to the `Security and Access` section.  Click `ADD ITEM` to add your ssh key.  Then click `SAVE` at the bottom.
 
-<img src="images/ssh-keys-v2.png"  width="450">
+<img src="images/ssh-keys-v2.png" width="450">
 
 - Mac:  
   - Use existing keys or generate a new key pair with ssh-keygen

@@ -1,0 +1,201 @@
+---
+# -------------------------------------------------------------
+# Arista Data Center Topology
+# 2 Spines & 2 Leaf Pairs with MLAG
+# -------------------------------------------------------------
+
+name: topo1
+prefix: ""
+
+mgmt:
+  network: mgmt
+  ipv4_subnet: 172.100.100.0/24
+
+topology:
+
+  defaults:
+    env:
+      INTFTYPE: et
+
+  kinds:
+    ceos:
+      image: ceos:4.27.3F
+    linux:
+      image: mitchv85/ohv-host
+
+  nodes: 
+
+###########################################
+# Graphite Node                           #
+# Provides Topologyu Graphing and the     #
+# ability to connect to nodes in the      #
+# topology via a web/ssh session          #
+###########################################
+
+    graphite:
+      kind: linux 
+      image: netreplica/graphite:webssh2
+      mgmt_ipv4: 172.100.100.109 
+      env:
+        GRAPHITE_DEFAULT_TYPE: clab 
+        GRAPHITE_DEFAULT_TOPO: topo1
+        # CLAB_SSH_CONNECTION: ${SSH_CONNECTION}
+      binds:
+        - .:/var/www/localhost/htdocs/clab
+      ports:
+        - 8080:80
+      exec:
+        - sh -c 'generate_offline_graph.sh'
+        - sh -c 'graphite_motd.sh 8080'
+      labels:
+        graph-hide: yes
+
+#########################
+# SPINE                 #
+#########################
+
+    SPINE1:
+      kind: ceos
+      mgmt_ipv4: 172.100.100.101
+      startup-config: configs/SPINE1.cfg
+      ports:
+        - '22001:22'
+        - '8001:80'
+        - '44301:443'
+      labels: 
+        graph-level: 1
+        graph-icon: switch
+
+    SPINE2:
+      kind: ceos
+      mgmt_ipv4: 172.100.100.102
+      startup-config: configs/SPINE2.cfg
+      ports:
+        - '22002:22'
+        - '8002:80'
+        - '44302:443'
+      labels: 
+        graph-level: 1
+        graph-icon: switch
+
+#########################
+# LEAF                  #
+#########################
+
+    LEAF1:
+      kind: ceos
+      mgmt_ipv4: 172.100.100.103
+      startup-config: configs/LEAF1.cfg
+      ports:
+        - '22003:22'
+        - '8003:80'
+        - '44303:443'
+      labels: 
+        graph-level: 2
+        graph-icon: switch
+
+    LEAF2:
+      kind: ceos
+      mgmt_ipv4: 172.100.100.104
+      startup-config: configs/LEAF2.cfg
+      ports:
+        - '22004:22'
+        - '8004:80'
+        - '44304:443'
+      labels: 
+        graph-level: 2
+        graph-icon: switch
+
+    LEAF3:
+      kind: ceos
+      mgmt_ipv4: 172.100.100.105
+      startup-config: configs/LEAF3.cfg
+      ports:
+        - '22005:22'
+        - '8005:80'
+        - '44305:443'
+      labels: 
+        graph-level: 2
+        graph-icon: switch
+
+    LEAF4:
+      kind: ceos
+      mgmt_ipv4: 172.100.100.106
+      startup-config: configs/LEAF4.cfg
+      ports:
+        - '22006:22'
+        - '8006:80'
+        - '44306:443'
+      labels: 
+        graph-level: 2
+        graph-icon: switch
+
+###########################################
+# HOST                                    #
+###########################################
+
+    HOSTA:
+      kind: linux
+      image: mitchv85/ohv-host
+      mgmt_ipv4: 172.100.100.107
+      ports:
+        - '22207:22'
+      exec:
+        - bash /usr/local/bin/hostnetconfig.sh -b -i 10.10.10.101/24 -g 10.10.10.1
+      labels: 
+        graph-level: 3
+        graph-icon: host
+
+    HOSTB:
+      kind: linux
+      image: mitchv85/ohv-host
+      mgmt_ipv4: 172.100.100.108
+      ports:
+        - '22208:22'
+      exec:
+        - bash /usr/local/bin/hostnetconfig.sh -b -i 10.10.10.102/24 -g 10.10.10.1
+      labels: 
+        graph-level: 3
+        graph-icon: host
+
+
+  links:
+####################
+# SPINE1 to LEAF   #
+####################
+    - endpoints: ["SPINE1:et2", "LEAF1:et2"]
+    - endpoints: ["SPINE1:et3", "LEAF2:et2"]
+    - endpoints: ["SPINE1:et4", "LEAF3:et2"]
+    - endpoints: ["SPINE1:et5", "LEAF4:et2"]
+####################
+# SPINE2 to LEAF   #
+####################
+    - endpoints: ["SPINE2:et2", "LEAF1:et3"]
+    - endpoints: ["SPINE2:et3", "LEAF2:et3"]
+    - endpoints: ["SPINE2:et4", "LEAF3:et3"]
+    - endpoints: ["SPINE2:et5", "LEAF4:et3"]
+####################
+# SPINE1 to SPINE2 #
+####################
+    - endpoints: ["SPINE1:et1", "SPINE2:et1"]
+    - endpoints: ["SPINE1:et6", "SPINE2:et6"]
+####################
+# LEAF1 to LEAF2   #
+####################
+    - endpoints: ["LEAF1:et1", "LEAF2:et1"]
+    - endpoints: ["LEAF1:et6", "LEAF2:et6"]
+####################
+# HOSTA            #
+####################
+    - endpoints: ["HOSTA:et1", "LEAF1:et4"]
+    - endpoints: ["HOSTA:et2", "LEAF2:et4"]
+####################
+# LEAF3 to LEAF4   #
+####################
+    - endpoints: ["LEAF3:et1", "LEAF4:et1"]
+    - endpoints: ["LEAF3:et6", "LEAF4:et6"]
+####################
+# HOSTB            #
+####################
+    - endpoints: ["HOSTB:et1", "LEAF3:et4"]
+    - endpoints: ["HOSTB:et2", "LEAF4:et4"]

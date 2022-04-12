@@ -1,8 +1,8 @@
-# ContainerLab using GCP
+# Using GCP to run ContainerLab
 
 <img src="images/gcp-clab.png"  width="450">
 
-This repositiory outlines the steps needed to create a VM running in GCP to run ContainerLab.  Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).
+This repository outlines the steps needed to create a VM running in GCP to run ContainerLab.  Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).
 ## Step 1: Create GCP Account
 
 Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).

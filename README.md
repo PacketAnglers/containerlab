@@ -1,2 +1,2 @@
 # ContainerLab
-[Getting Started with CGP and CointainerLab](CONTAINERLAB.md)
+[Getting Started with CGP and ContainerLab](CONTAINERLAB.md)

@@ -160,6 +160,7 @@ topology:
 
 
   links:
+
 ####################
 # SPINE1 to LEAF   #
 ####################
@@ -167,6 +168,7 @@ topology:
     - endpoints: ["SPINE1:et3", "LEAF2:et2"]
     - endpoints: ["SPINE1:et4", "LEAF3:et2"]
     - endpoints: ["SPINE1:et5", "LEAF4:et2"]
+
 ####################
 # SPINE2 to LEAF   #
 ####################
@@ -174,28 +176,33 @@ topology:
     - endpoints: ["SPINE2:et3", "LEAF2:et3"]
     - endpoints: ["SPINE2:et4", "LEAF3:et3"]
     - endpoints: ["SPINE2:et5", "LEAF4:et3"]
+
 ####################
 # SPINE1 to SPINE2 #
 ####################
     - endpoints: ["SPINE1:et1", "SPINE2:et1"]
     - endpoints: ["SPINE1:et6", "SPINE2:et6"]
+
 ####################
 # LEAF1 to LEAF2   #
 ####################
     - endpoints: ["LEAF1:et1", "LEAF2:et1"]
     - endpoints: ["LEAF1:et6", "LEAF2:et6"]
-####################
-# HOSTA            #
-####################
-    - endpoints: ["HOSTA:et1", "LEAF1:et4"]
-    - endpoints: ["HOSTA:et2", "LEAF2:et4"]
+
 ####################
 # LEAF3 to LEAF4   #
 ####################
     - endpoints: ["LEAF3:et1", "LEAF4:et1"]
     - endpoints: ["LEAF3:et6", "LEAF4:et6"]
+
+####################
+# HOSTA            #
+####################
+    - endpoints: ["HOSTA:eth1", "LEAF1:et4"]
+    - endpoints: ["HOSTA:eth2", "LEAF2:et4"]
+
 ####################
 # HOSTB            #
 ####################
-    - endpoints: ["HOSTB:et1", "LEAF3:et4"]
-    - endpoints: ["HOSTB:et2", "LEAF4:et4"]
+    - endpoints: ["HOSTB:eth1", "LEAF3:et4"]
+    - endpoints: ["HOSTB:eth2", "LEAF4:et4"]

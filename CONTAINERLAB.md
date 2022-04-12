@@ -27,6 +27,8 @@ From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine 
   - `Version:` 20.04 LTS
   - `Boot disk type:` Balanced persistent disk
   - `Size (GB):` 20
+- `Firewall:`
+  - `Allow HTTP Access`: Yes
 
 Now click `CREATE` at the bottom.
 ### 2.2 Add SSH Keys

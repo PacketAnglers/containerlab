@@ -3,7 +3,7 @@
 This repositiory outlines the steps needed to create a GCP Account to create a VM to run ContainerLab.
 ## Step 1: Create GCP Account
 
-https://console.cloud.google.com/
+[https://console.cloud.google.com/](https://console.cloud.google.com/)
 
 Free $300 Credit to use.  No autocharge after free trial ends.
 
@@ -11,31 +11,33 @@ Typical VM Usage Fee is:  $0.25/hr (8 vCPUs 32GM RAM)
 
 Disk and Public Static IP Address - additional cost (but minimal)
 
-## Step 2: Create Project & VM Instance
-Create a New Project to track your VMs under.
+## Step 2: Create Project and VM Instance with SSH Keys
+Create a New [Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) to track your VMs under.
 
-VM Instance:
+Create VM Instance with the following attributes:
 
 - Machine type:	e2-standard-8 (8vCPUs and 32GB RAM)
 - Disk: 20GB
 - OS: Ubuntu 20.04
 
 
-SSH Keys
+**SSH Keys**
 
-After Instance boots, then add your Public SSH Key to the VM Instance.
+After Instance boots, then add your Public SSH Key to the VM Instance.  In GCP, edit your VM instance and scroll down to the "Security and access" section.  Click `ADD ITEM` to add your ssh key.  Then click `SAVE` at the bottom.
 
-Mac:  
-- Use existing keys or generate a new key pair with ssh-keygen
-- Add Public Key to Host
-- Connect to Host using favorite SSH client
+<img src="images/ssh-keys.png"  width="450">
 
-Windows (Putty):
-- Use Puttygen to create Key Pair
-- Add Public Key to the Host
-- Connect to Host via Putty using Private Key
+- Mac:  
+  - Use existing keys or generate a new key pair with ssh-keygen
+  - Add Public Key to Host
+  - Connect to Host using favorite SSH client
 
-Now ssh to VM instance using the assigned public IP address.  Note you can make this a static address if desired.
+- Windows (Putty):
+  - Use Puttygen to create Key Pair
+  - Add Public Key to the Host
+  - Connect to Host via Putty using Private Key
+
+Now SSH to VM instance using the assigned public IP address.  Note you can make this a static address if desired.
 
 ## Step 3: Install Docker
 Below is a simplified one liner bash script that will install docker to your Linux VM.

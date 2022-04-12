@@ -74,14 +74,14 @@ This is a one line install script. It will detect the OS
 bash -c "$(curl -sL https://get-clab.srlinux.dev)"
 ```
 
-## Step 6: Clone Example ContainerLab Topology Repo
+## Step 6: Clone ContainerLab Topology Repo
 
 ```bash
-git clone https://github.com/PacketAnglers/clab-topos.git
+git clone https://github.com/PacketAnglers/containerlab.git
 ```
 
 ## Step 7: Start first ContainerLab
 
 ```bash
-sudo clab deploy -t clab-topos/atd-dc/atd-dc.yml --reconfigure
+sudo clab deploy -t containerlab/topologies/topo1/topo1.yaml --reconfigure
 ```

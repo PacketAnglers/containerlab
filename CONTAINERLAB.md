@@ -1,12 +1,13 @@
 # ContainerLab using GCP
 
+This repositiory outlines the steps needed to create a GCP Account to create a VM to run ContainerLab.
 ## Step 1: Create GCP Account
 
 https://console.cloud.google.com/
+
 Free $300 Credit to use.  No autocharge after free trial ends.
 
-Typical VM Usage Fee is:  $0.25/hr
-8 vCPUs 32GM RAM
+Typical VM Usage Fee is:  $0.25/hr (8 vCPUs 32GM RAM)
 
 Disk and Public Static IP Address - additional cost (but minimal)
 
@@ -15,26 +16,24 @@ Create a New Project to track your VMs under.
 
 VM Instance:
 
-Machine type:	e2-standard-8 (8vCPUs and 32GB RAM)
-Disk: 20GB
-OS: Ubuntu 20.04
+- Machine type:	e2-standard-8 (8vCPUs and 32GB RAM)
+- Disk: 20GB
+- OS: Ubuntu 20.04
 
 
 SSH Keys
 
-After Instance boots, then Add SSH Public Key to the VM Instance.
+After Instance boots, then add your Public SSH Key to the VM Instance.
 
 Mac:  
-Use existing keys or generate a new key pair with ssh-keygen
-Add Public Key to Host (see below)
-Connect to Host using favorite SSH client
+- Use existing keys or generate a new key pair with ssh-keygen
+- Add Public Key to Host
+- Connect to Host using favorite SSH client
 
-Windows:
-Use Puttygen to create Key Pair
-Add Public Key to the Host (see below)
-Connect to Host via Putty using Private Key
-
-Add Keys to VM Instance
+Windows (Putty):
+- Use Puttygen to create Key Pair
+- Add Public Key to the Host
+- Connect to Host via Putty using Private Key
 
 Now ssh to VM instance using the assigned public IP address.  Note you can make this a static address if desired.
 

@@ -98,7 +98,7 @@ http://< VM public ip >/graphite
 
 <img src="images/topology.png" width="450">
 
-Click on SPINE1 to connect to it via a web/ssh session.
+Click on SPINE1 to connect via a web/ssh session.
 
 <img src="images/spinepopup.png" width="200">
 

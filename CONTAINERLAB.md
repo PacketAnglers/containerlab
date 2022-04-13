@@ -96,6 +96,19 @@ Point your browser to the the public IP of your VM at this URL:
 
 http://< VM public ip >/graphite
 
+<img src="images/topology.png" width="450">
+
+Click on SPINE1 to connect to it via a web/ssh session.
+
+<img src="images/spinepopup.png" width="200">
+
+Login with credentials:
+
+- `username:` admin
+- `password:` admin
+
+<img src="images/websession.png" width="300">
+
 ## Step 9: Destory Lab
 
 ```bash

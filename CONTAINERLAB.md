@@ -111,6 +111,8 @@ Login with credentials:
 
 ## Step 9: Destory Lab
 
+When you are done using your lab, run the destroy command to shutdown the lab clean up docker containers.
+
 ```bash
 sudo clab destroy -t containerlab/topologies/topo1/topo1.yaml
 ```

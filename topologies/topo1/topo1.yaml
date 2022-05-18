@@ -23,7 +23,7 @@ topology:
     linux:
       image: mitchv85/ohv-host
 
-  nodes: 
+  nodes:
 
 ###########################################
 # Graphite Node                           #
@@ -33,11 +33,11 @@ topology:
 ###########################################
 
     graphite:
-      kind: linux 
+      kind: linux
       image: netreplica/graphite:webssh2
-      mgmt_ipv4: 172.100.100.109 
+      mgmt_ipv4: 172.100.100.109
       env:
-        GRAPHITE_DEFAULT_TYPE: clab 
+        GRAPHITE_DEFAULT_TYPE: clab
         GRAPHITE_DEFAULT_TOPO: topo1
         # CLAB_SSH_CONNECTION: ${SSH_CONNECTION}
       binds:
@@ -62,7 +62,7 @@ topology:
         - '22001:22'
         - '8001:80'
         - '44301:443'
-      labels: 
+      labels:
         graph-level: 1
         graph-icon: switch
 
@@ -74,7 +74,7 @@ topology:
         - '22002:22'
         - '8002:80'
         - '44302:443'
-      labels: 
+      labels:
         graph-level: 1
         graph-icon: switch
 
@@ -90,7 +90,7 @@ topology:
         - '22003:22'
         - '8003:80'
         - '44303:443'
-      labels: 
+      labels:
         graph-level: 2
         graph-icon: switch
 
@@ -102,7 +102,7 @@ topology:
         - '22004:22'
         - '8004:80'
         - '44304:443'
-      labels: 
+      labels:
         graph-level: 2
         graph-icon: switch
 
@@ -114,7 +114,7 @@ topology:
         - '22005:22'
         - '8005:80'
         - '44305:443'
-      labels: 
+      labels:
         graph-level: 2
         graph-icon: switch
 
@@ -126,7 +126,7 @@ topology:
         - '22006:22'
         - '8006:80'
         - '44306:443'
-      labels: 
+      labels:
         graph-level: 2
         graph-icon: switch
 
@@ -142,7 +142,7 @@ topology:
         - '22207:22'
       exec:
         - bash /usr/local/bin/hostnetconfig.sh -b -i 10.10.10.101/24 -g 10.10.10.1
-      labels: 
+      labels:
         graph-level: 3
         graph-icon: host
 
@@ -154,7 +154,7 @@ topology:
         - '22208:22'
       exec:
         - bash /usr/local/bin/hostnetconfig.sh -b -i 10.10.10.102/24 -g 10.10.10.1
-      labels: 
+      labels:
         graph-level: 3
         graph-icon: host
 

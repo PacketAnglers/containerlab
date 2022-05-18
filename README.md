@@ -45,11 +45,13 @@ After Instance boots, add your Public SSH Key to the VM Instance.  In GCP, edit 
 - Mac:
   - Use existing keys or generate a new key pair with ssh-keygen
   - `ssh-keygen -t rsa`
+  - Detailed instructions can be found [here](https://www.digitalocean.com/community/tutorials/how-to-create-ssh-keys-with-openssh-on-macos-or-linux)
   - Add Public Key to Host
   - Connect to Host using favorite SSH client
 
 - Windows (Putty):
   - Use Puttygen to create Key Pair
+  - Detailed instructiins can be found [here](https://www.ssh.com/academy/ssh/putty/windows/puttygen)
   - Add Public Key to the Host
   - Connect to Host via Putty using Private Key
 ### 2.3 - Connect to VM.

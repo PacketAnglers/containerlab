@@ -88,7 +88,7 @@ git clone https://github.com/PacketAnglers/containerlab.git
 
 ## Step 7: Start ContainerLab
 
-Below is a simple L2LS Topology that is part of the repo you just cloned.  After starting the lab you can connect to HostA and trying ping HostB.
+Below is a simple L2LS Topology that is part of the repo you just cloned.  After starting the lab connect to HostA and try pinging HostB.
 
 <img src="images/l2ls-topo.png" width="700">
 

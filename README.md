@@ -2,7 +2,9 @@
 
 This repository outlines the steps needed to create a virtual network with Arista cEOS container image running on a Virtual Instance in Google Cloud Platform (GCP) utilizing ContainerLab.
 
+<p align="center">
 <img src="images/gcp-clab-v3.png" width="450">
+</p>
 
 ## Step 1: Create GCP Account
 

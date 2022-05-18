@@ -95,7 +95,7 @@ git clone https://github.com/PacketAnglers/containerlab.git
 
 ## Step 7: Start ContainerLab
 
-Below is a simple L2LS Topology that is part of the repo you just cloned.  After starting the lab connect to HostA and try pinging HostB.
+Below is a simple L2LS Topology that is part of the repo you just cloned.
 
 <p align="center">
 <img src="images/l2ls-topo.png" width="700">
@@ -128,6 +128,12 @@ Login with credentials:
 <p align="center">
 <img src="images/websession.png" width="300">
 </p>
+
+Connect to HostA and try pinging HostB.
+
+```bash
+admin@HOSTA:~$ ping 10.20.20.100
+```
 
 ## Step 9: Destory Lab
 

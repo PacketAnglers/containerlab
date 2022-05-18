@@ -44,6 +44,7 @@ After Instance boots, add your Public SSH Key to the VM Instance.  In GCP, edit 
 
 - Mac:
   - Use existing keys or generate a new key pair with ssh-keygen
+  - `ssh-keygen -t rsa`
   - Add Public Key to Host
   - Connect to Host using favorite SSH client
 

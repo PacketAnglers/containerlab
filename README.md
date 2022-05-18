@@ -113,14 +113,18 @@ http://< VM public ip >/graphite
 
 Click on SPINE1 to connect via a web/ssh session.
 
+<p align="center">
 <img src="images/spinepopup.png" width="200">
+</p>
 
 Login with credentials:
 
 - `username:` admin
 - `password:` admin
 
+<p align="center">
 <img src="images/websession.png" width="300">
+</p>
 
 ## Step 9: Destory Lab
 

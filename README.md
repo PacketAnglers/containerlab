@@ -4,10 +4,9 @@ This repository outlines the steps needed to create a virtual network with Arist
 
 <img src="images/gcp-clab-v3.png" width="450">
 
-Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).
 ## Step 1: Create GCP Account
 
-Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).
+You need a Gmail account and then you can activate your GCP account. Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).
 Free $300 Credit to use for 90 days.  No autocharge after free trial ends.
 
 Typical VM Usage Fee is:  $0.25/hr (8 vCPUs 32GM RAM)

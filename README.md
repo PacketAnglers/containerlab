@@ -51,7 +51,7 @@ After Instance boots, add your Public SSH Key to the VM Instance.  In GCP, edit 
 
 - Windows (Putty):
   - Use Puttygen to create Key Pair
-  - Detailed instructiins can be found [here](https://www.ssh.com/academy/ssh/putty/windows/puttygen)
+  - Detailed instructions can be found [here](https://www.ssh.com/academy/ssh/putty/windows/puttygen)
   - Add Public Key to the Host
   - Connect to Host via Putty using Private Key
 ### 2.3 - Connect to VM.

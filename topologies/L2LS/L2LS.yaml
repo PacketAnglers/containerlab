@@ -4,7 +4,7 @@
 # 2 Spines & 2 Leaf Pairs with MLAG
 # -------------------------------------------------------------
 
-name: topo1
+name: L2LS
 prefix: ""
 
 mgmt:
@@ -38,7 +38,7 @@ topology:
       mgmt_ipv4: 172.100.100.109
       env:
         GRAPHITE_DEFAULT_TYPE: clab
-        GRAPHITE_DEFAULT_TOPO: topo1
+        GRAPHITE_DEFAULT_TOPO: L2LS
         # CLAB_SSH_CONNECTION: ${SSH_CONNECTION}
       binds:
         - .:/var/www/localhost/htdocs/clab

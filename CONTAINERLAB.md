@@ -88,7 +88,7 @@ git clone https://github.com/PacketAnglers/containerlab.git
 ## Step 7: Start ContainerLab
 
 ```bash
-sudo clab deploy -t containerlab/topologies/topo1/topo1.yaml --reconfigure
+sudo clab deploy -t containerlab/topologies/L2LS/L2LS.yaml --reconfigure
 ```
 
 ## Step 8: Connect to your ContainerLab
@@ -114,7 +114,7 @@ Login with credentials:
 When you are done using your lab, run the destroy command to shutdown the lab clean up docker containers.
 
 ```bash
-sudo clab destroy -t containerlab/topologies/topo1/topo1.yaml
+sudo clab destroy -t containerlab/topologies/L2LS/L2LS.yaml
 ```
 
 ## Step 10: Shutdown VM

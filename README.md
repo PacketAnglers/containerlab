@@ -38,9 +38,11 @@ Now click `CREATE` at the bottom.
 
 After Instance boots, add your Public SSH Key to the VM Instance.  In GCP, edit your VM instance and scroll down to the `Security and Access` section.  Click `ADD ITEM` to add your ssh key.  Then click `SAVE` at the bottom.
 
+<p align="center">
 <img src="images/ssh-keys-v2.png" width="450">
+</p>
 
-- Mac:  
+- Mac:
   - Use existing keys or generate a new key pair with ssh-keygen
   - Add Public Key to Host
   - Connect to Host using favorite SSH client
@@ -49,7 +51,7 @@ After Instance boots, add your Public SSH Key to the VM Instance.  In GCP, edit 
   - Use Puttygen to create Key Pair
   - Add Public Key to the Host
   - Connect to Host via Putty using Private Key
-### 2.3 - Connect to VM.  
+### 2.3 - Connect to VM.
 
 Now SSH to VM instance using the assigned public IP address.  Note you can make this a static address if desired.
 
@@ -62,7 +64,7 @@ bash -c "$(curl http://www.packetanglers.com/installdocker.sh)"
 
 Logout and log back in to enable sudo permissions to Docker.
 
-## Step 4: Download cEOS Image and import into Docker 
+## Step 4: Download cEOS Image and import into Docker
 The following 2 commands will download an Arista cEOS Container image file and then import it into Docker.
 
 ```bash
@@ -92,7 +94,9 @@ git clone https://github.com/PacketAnglers/containerlab.git
 
 Below is a simple L2LS Topology that is part of the repo you just cloned.  After starting the lab connect to HostA and try pinging HostB.
 
+<p align="center">
 <img src="images/l2ls-topo.png" width="700">
+</p>
 
 ```bash
 sudo clab deploy -t containerlab/topologies/L2LS/L2LS.yaml --reconfigure
@@ -103,7 +107,9 @@ Point your browser to the the public IP of your VM at this URL:
 
 http://< VM public ip >/graphite
 
+<p align="center">
 <img src="images/topology.png" width="450">
+</p>
 
 Click on SPINE1 to connect via a web/ssh session.
 

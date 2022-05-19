@@ -135,7 +135,7 @@ Connect to HostA and try pinging HostB.
 admin@HOSTA:~$ ping 10.20.20.100
 ```
 
-## Step 9: Destory Lab
+## Step 9: Destroy Lab
 
 When you are done using your lab, run the destroy command to shutdown the lab clean up docker containers.
 

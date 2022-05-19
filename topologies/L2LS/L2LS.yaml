@@ -27,7 +27,7 @@ topology:
 
 ###########################################
 # Graphite Node                           #
-# Provides Topologyu Graphing and the     #
+# Provides Topology Graphing and the     #
 # ability to connect to nodes in the      #
 # topology via a web/ssh session          #
 ###########################################

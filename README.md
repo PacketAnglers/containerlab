@@ -91,7 +91,7 @@ This is a one line install script. It will detect the OS
 bash -c "$(curl -sL https://get-clab.srlinux.dev)"
 ```
 
-## Step 6: Clone ContainerLab Topology Repo
+## Step 6: Clone Example L2LS ContainerLab Topology Repo
 
 ```bash
 git clone https://github.com/PacketAnglers/containerlab.git
@@ -150,6 +150,8 @@ sudo clab destroy -t containerlab/topologies/L2LS/L2LS.yaml
 ## Step 10: Shutdown VM
 
 From GCP Console, make sure you shutdown your VM when you are not using it.  You also can create Instance Schedules to ensure VMs are shutdown at a certain time of day.
+
+> **_NOTE:_** This works as well. `sudo shutdown -h now`
 
 # Next Steps
 

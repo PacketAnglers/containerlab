@@ -30,12 +30,12 @@ From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine 
 | Machine Series | E2 |
 | Machine type | e2-standard-8 (8vCPUs and 32GB RAM) |
 | Boot Disk |
-| <pre>   Operating System </pre> | Ubuntu |
-| <pre>   Version </pre> | 20.04 LTS |
-| <pre>   Boot disk type </pre> | Balanced persistent disk |
-| <pre>   Size (GB) </pre> | 20 |
+| &nbsp;&nbsp;&nbsp;&nbsp; Operating System | Ubuntu |
+| &nbsp;&nbsp;&nbsp;&nbsp; Version | 20.04 LTS |
+| &nbsp;&nbsp;&nbsp;&nbsp; Boot disk type | Balanced persistent disk |
+| &nbsp;&nbsp;&nbsp;&nbsp; Size (GB) | 20 |
 | Firewall |
-| <pre>   Allow HTTP Access </pre> | Yes |
+| &nbsp;&nbsp;&nbsp;&nbsp; Allow HTTP Access | Yes |
 
 - `Name:` < hostname given to VM >
 - `Region:` < your choice >

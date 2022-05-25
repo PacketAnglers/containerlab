@@ -22,6 +22,21 @@ Disk and Public Static IP Address - additional cost (but minimal)
 From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine section.  If this is your first time creating a VM instance in GCP, you will need to enable Compute Engine API.  This takes a few seconds to complete.  Once complete, you will be able to add a new VM Instance by clicking `CREATE INSTANCE`.  Use the follow instance attributes to create a VM capable of sufficiently running several cEOS instances for your ContainerLab environiment.
 ### 2.1 - Create VM Instance with the following attributes:
 
+| Key | Value |
+| --- | ----- |
+| Name | < hostname of VM > |
+| Region | < your choice > |
+| Zone | < your choice > |
+| Machine Series | E2 |
+| Machine type | e2-standard-8 (8vCPUs and 32GB RAM) |
+| Boot Disk | |
+| --- Operating System | Ubuntu |
+| --- Version | 20.04 LTS |
+| --- Boot disk type | Balanced persistent disk |
+| --- Size (GB) | 20 |
+| Firewall | |
+| --- Allow HTTP Access | Yes |
+
 - `Name:` < hostname given to VM >
 - `Region:` < your choice >
 - `Zone:` < your choice >

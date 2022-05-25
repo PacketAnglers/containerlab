@@ -29,26 +29,13 @@ From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine 
 | Zone | < your choice > |
 | Machine Series | E2 |
 | Machine type | e2-standard-8 (8vCPUs and 32GB RAM) |
-| Boot Disk |
+| Boot Disk | |
 | &nbsp;&nbsp;&nbsp;&nbsp; Operating System | Ubuntu |
 | &nbsp;&nbsp;&nbsp;&nbsp; Version | 20.04 LTS |
 | &nbsp;&nbsp;&nbsp;&nbsp; Boot disk type | Balanced persistent disk |
 | &nbsp;&nbsp;&nbsp;&nbsp; Size (GB) | 20 |
-| Firewall |
+| Firewall | |
 | &nbsp;&nbsp;&nbsp;&nbsp; Allow HTTP Access | Yes |
-
-- `Name:` < hostname given to VM >
-- `Region:` < your choice >
-- `Zone:` < your choice >
-- `Machine Series:` E2
-- `Machine type:` e2-standard-8 (8vCPUs and 32GB RAM)
-- `Boot Disk:`
-  - `Operating System:` Ubuntu
-  - `Version:` 20.04 LTS
-  - `Boot disk type:` Balanced persistent disk
-  - `Size (GB):` 20
-- `Firewall:`
-  - `Allow HTTP Access`: Yes
 
 Now click `CREATE` at the bottom.
 ### 2.2 Add SSH Keys

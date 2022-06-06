@@ -69,7 +69,8 @@ Below is a simplified one liner bash script that will install docker to your Lin
 bash -c "$(curl http://www.packetanglers.com/installdocker.sh)"
 ```
 
-Logout and log back in to enable sudo permissions to Docker.
+> **_NOTE:_** Logout and log back in to enable sudo permissions to Docker.
+
 
 ## Step 4: Download cEOS Image and import into Docker
 The following 2 commands will download an Arista cEOS Container image file and then import it into Docker.

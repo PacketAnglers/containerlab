@@ -17,9 +17,15 @@ Typical VM Usage Fee is:  $0.25/hr (8 vCPUs 32GM RAM)
 
 Disk and Public Static IP Address - additional cost (but minimal)
 
-## Step 2: Create VM Instance with SSH Keys
+## Step 2: Create VM Instance
 
-From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine section.  If this is your first time creating a VM instance in GCP, you will need to enable Compute Engine API.  This takes a few seconds to complete.  Once complete, you will be able to add a new VM Instance by clicking `CREATE INSTANCE`.  Use the follow instance attributes to create a VM capable of sufficiently running several cEOS instances for your ContainerLab environiment.
+From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine section.  If this is your first time creating a VM instance in GCP, you will need to enable Compute Engine API.  This takes a few seconds to complete.
+
+<p align="center">
+<img src="images/compute_api.png" width="200">
+</p>
+
+Once complete, you will be able to add a new VM Instance by clicking `CREATE INSTANCE`.  Use the follow instance attributes to create a VM capable of sufficiently running several cEOS instances for your ContainerLab environiment.
 ### 2.1 - Create VM Instance with the following attributes:
 
 | Parameter | Value |
@@ -38,7 +44,7 @@ From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine 
 | &nbsp;&nbsp;&nbsp;&nbsp; Allow HTTP Access | Yes |
 
 Now click `CREATE` at the bottom.
-### 2.2 Add SSH Keys
+### 2.2 Add SSH Keys fort Authentication
 
 After Instance boots, add your Public SSH Key to the VM Instance.  In GCP, edit your VM instance and scroll down to the `Security and Access` section.  Click `ADD ITEM` to add your ssh key.  Then click `SAVE` at the bottom.
 

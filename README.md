@@ -25,7 +25,7 @@ From GCP [Console](https://console.cloud.google.com/), go to the Compute Engine 
 <img src="images/compute_api.png" width="200">
 </p>
 
-Once complete, you will be able to add a new VM Instance by clicking `CREATE INSTANCE`.  Use the follow instance attributes to create a VM capable of sufficiently running several cEOS instances for your ContainerLab environiment.
+Once complete, you will be able to add a new VM Instance by clicking `CREATE INSTANCE`.  Use the follow instance attributes to create a VM capable of sufficiently running several cEOS instances for your ContainerLab environiment.  Detailed instructions to create a VM Instance can be found [here](https://cloud.google.com/compute/docs/create-linux-vm-instance).
 ### 2.1 - Create VM Instance with the following attributes:
 
 | Parameter | Value |

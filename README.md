@@ -95,7 +95,7 @@ docker import cEOS-lab-4.27.3F.tar ceos:4.27.3F
 This is a one line install script. It will detect the OS
 
 ```bash
-bash -c "$(curl -sL https://get-clab.srlinux.dev)"
+bash -c "$(curl -sL https://get.containerlab.dev)"
 ```
 
 ## Step 6: Clone Example L2LS ContainerLab Topology Repo

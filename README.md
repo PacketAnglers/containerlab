@@ -82,13 +82,13 @@ bash -c "$(curl http://www.packetanglers.com/installdocker.sh)"
 The following 2 commands will download an Arista cEOS Container image file and then import it into Docker.
 
 ```bash
-curl http://www.packetanglers.com/images/cEOS-lab-4.27.3F.tar -o cEOS-lab-4.27.3F.tar
+curl http://www.packetanglers.com/images/cEOS-lab-4.29.1F.tar.xz -o cEOS-lab-4.29.1F.tar.xz
 ```
 
 Now import this image into Docker - takes approximately 30 secs.  Be patient.
 
 ```bash
-docker import cEOS-lab-4.27.3F.tar ceos:4.27.3F
+docker import cEOS-lab-4.29.1F.tar.xz ceos:4.29.1F
 ```
 ## Step 5: Install ContainerLab
 

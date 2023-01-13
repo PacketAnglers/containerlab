@@ -24,7 +24,7 @@ topology:
 
   kinds:
     ceos:
-      image: ceos:4.27.3F
+      image: ceos:4.29.1F
     linux:
       image: mitchv85/ohv-host
 

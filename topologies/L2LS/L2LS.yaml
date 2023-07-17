@@ -39,7 +39,7 @@ topology:
 
     graphite:
       kind: linux
-      image: netreplica/graphite
+      image: netreplica/graphite:webssh2
       mgmt_ipv4: 172.100.100.109
       env:
         GRAPHITE_DEFAULT_TYPE: clab

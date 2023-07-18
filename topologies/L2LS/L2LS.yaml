@@ -39,19 +39,16 @@ topology:
 
     graphite:
       kind: linux
-      image: netreplica/graphite:webssh2
+      image: netreplica/graphite
       mgmt_ipv4: 172.100.100.109
       env:
-        GRAPHITE_DEFAULT_TYPE: clab
-        GRAPHITE_DEFAULT_TOPO: L2LS
-        # CLAB_SSH_CONNECTION: ${SSH_CONNECTION}
+        HOST_CONNECTION: ${SSH_CONNECTION}
       binds:
-        # - .:/var/www/localhost/htdocs/clab   <----  This is the old path in docker image netreplica/graphite:webssh2
-        - .:/htdocs/clab    # New path required for latest version
+        - __clabDir__/topology-data.json:/htdocs/default/default.json:ro
+        - __clabDir__/ansible-inventory.yml:/htdocs/lab/default/ansible-inventory.yml:ro
       ports:
         - 80:80
       exec:
-        # - sh -c 'generate_offline_graph.sh'   # used to generate offline graphs
         - sh -c 'graphite_motd.sh 80'
       labels:
         graph-hide: yes

@@ -13,7 +13,7 @@ prefix: ""
 #https://containerlab.dev/manual/network/#configuring-management-network
 mgmt:
   network: mgmt
-  ipv4_subnet: 172.100.100.0/24
+  ipv4-subnet: 172.100.100.0/24
 
 #https://containerlab.dev/manual/topo-def-file/#topology
 topology:
@@ -40,7 +40,7 @@ topology:
     graphite:
       kind: linux
       image: netreplica/graphite
-      mgmt_ipv4: 172.100.100.109
+      mgmt-ipv4: 172.100.100.109
       env:
         HOST_CONNECTION: ${SSH_CONNECTION}
       binds:
@@ -60,7 +60,7 @@ topology:
 #https://containerlab.dev/manual/topo-def-file/#nodes
     SPINE1:
       kind: ceos
-      mgmt_ipv4: 172.100.100.101
+      mgmt-ipv4: 172.100.100.101
       startup-config: configs/SPINE1.cfg
       ports:
         - '22001:22'
@@ -72,7 +72,7 @@ topology:
 
     SPINE2:
       kind: ceos
-      mgmt_ipv4: 172.100.100.102
+      mgmt-ipv4: 172.100.100.102
       startup-config: configs/SPINE2.cfg
       ports:
         - '22002:22'
@@ -88,7 +88,7 @@ topology:
 
     LEAF1:
       kind: ceos
-      mgmt_ipv4: 172.100.100.103
+      mgmt-ipv4: 172.100.100.103
       startup-config: configs/LEAF1.cfg
       ports:
         - '22003:22'
@@ -100,7 +100,7 @@ topology:
 
     LEAF2:
       kind: ceos
-      mgmt_ipv4: 172.100.100.104
+      mgmt-ipv4: 172.100.100.104
       startup-config: configs/LEAF2.cfg
       ports:
         - '22004:22'
@@ -112,7 +112,7 @@ topology:
 
     LEAF3:
       kind: ceos
-      mgmt_ipv4: 172.100.100.105
+      mgmt-ipv4: 172.100.100.105
       startup-config: configs/LEAF3.cfg
       ports:
         - '22005:22'
@@ -124,7 +124,7 @@ topology:
 
     LEAF4:
       kind: ceos
-      mgmt_ipv4: 172.100.100.106
+      mgmt-ipv4: 172.100.100.106
       startup-config: configs/LEAF4.cfg
       ports:
         - '22006:22'
@@ -141,7 +141,7 @@ topology:
     HOSTA:
       kind: linux
       image: mitchv85/ohv-host
-      mgmt_ipv4: 172.100.100.107
+      mgmt-ipv4: 172.100.100.107
       ports:
         - '22207:22'
       exec:
@@ -153,7 +153,7 @@ topology:
     HOSTB:
       kind: linux
       image: mitchv85/ohv-host
-      mgmt_ipv4: 172.100.100.108
+      mgmt-ipv4: 172.100.100.108
       ports:
         - '22208:22'
       exec:

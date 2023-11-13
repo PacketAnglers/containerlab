@@ -24,7 +24,12 @@ topology:
 
   kinds:
     ceos:
-      image: ceos:4.29.1F
+      # adjust to the name of the docker image you imported
+      # format:
+      #     image: <REPOSITORY>:<TAG>
+      # Check docker images with the following docker command:
+      #     docker images
+      image: ceos:4.30.3M
     linux:
       image: mitchv85/ohv-host
 

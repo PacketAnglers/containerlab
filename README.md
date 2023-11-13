@@ -8,6 +8,12 @@ This repository outlines the steps needed to create a virtual network with Arist
 <img src="images/gcp-clab-v3.png" width="450">
 </p>
 
+## Requirements
+
+- Arista account to download cEOS image from [arista.com](https://www.arista.com/). Create a free account if needed.
+- Linux host - tested with Ubuntu 20.04 LTS
+  - Recommended specs - 8 vCPUs, 32GB RAM, 20GB Disk
+
 ## Step 1: Create GCP Account
 
 You need a Gmail account and then you can activate your GCP account. Details on how to create your GCP Free Account can be found [here](https://cloud.google.com/).
@@ -72,23 +78,23 @@ Now SSH to VM instance using the assigned public IP address.  Note you can make 
 Below is a simplified one liner bash script that will install docker to your Linux VM.
 
 ```bash
-bash -c "$(curl http://www.packetanglers.com/installdocker.sh)"
+bash -c "$(curl https://raw.githubusercontent.com/PacketAnglers/containerlab/main/images/installdocker.sh)"
 ```
 
 > **_NOTE:_** Logout and log back in to enable sudo permissions to Docker.
 
 
 ## Step 4: Download cEOS Image and import into Docker
-The following 2 commands will download an Arista cEOS Container image file and then import it into Docker.
 
-```bash
-curl http://www.packetanglers.com/images/cEOS-lab-4.29.1F.tar.xz -o cEOS-lab-4.29.1F.tar.xz
-```
+Under [Arista-Support-Software](https://www.arista.com/en/support/software-download) download a cEOS image of your choice. Arista account required. Create a free account with your business email if needed.
+
+![cEOS Images](images/cEOS-image-folder.png)
 
 Now import this image into Docker - takes approximately 30 secs.  Be patient.
 
 ```bash
-docker import cEOS-lab-4.29.1F.tar.xz ceos:4.29.1F
+# Sample import command, modify as needed for the image you downloaded
+docker import cEOS-lab-4.30.3M.tar.xz ceos:4.30.3M
 ```
 ## Step 5: Install ContainerLab
 

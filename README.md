@@ -72,7 +72,7 @@ Now SSH to VM instance using the assigned public IP address.  Note you can make 
 Below is a simplified one liner bash script that will install docker to your Linux VM.
 
 ```bash
-bash -c "$(curl http://www.packetanglers.com/installdocker.sh)"
+bash -c "$(curl https://raw.githubusercontent.com/PacketAnglers/containerlab/main/images/installdocker.sh)"
 ```
 
 > **_NOTE:_** Logout and log back in to enable sudo permissions to Docker.
